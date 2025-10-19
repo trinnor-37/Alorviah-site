@@ -7,15 +7,13 @@
   <meta name="description" content="High-fashion AI editorial portfolio of Alorviah. Luxury visuals, lifestyle shots, and collaborations.">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
   <style>
-    :root{--plum:#5B2C6F;--moss:#556B2F;--ivory:#F8F6F0;--graphite:#1F1F1F}
+    :root{--orchid:#5B2C6F;--moss:#556B2F;--ivory:#F8F6F0;--graphite:#1F1F1F}
     *{box-sizing:border-box;margin:0;padding:0}
     body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:var(--ivory);color:var(--graphite);line-height:1.65}
-    /* Header */
     header{display:flex;justify-content:space-between;align-items:center;padding:1rem 1.25rem;background:#fff;position:sticky;top:0;border-bottom:1px solid #eee;z-index:10}
     .brand{font-family:"Playfair Display",serif;font-weight:700;letter-spacing:.12em;text-decoration:none;color:var(--graphite)}
     nav a{margin-left:1rem;text-decoration:none;color:var(--graphite);font-weight:600}
-    nav a:hover{color:var(--plum)}
-    /* Sections */
+    nav a:hover{color:var(--orchid)}
     .wrap{max-width:1060px;margin:0 auto;padding:0 1rem}
     h2{font-family:"Playfair Display",serif;font-size:1.9rem;margin:0 0 1rem}
     .card{background:#fff;border:1px solid rgba(0,0,0,.06);border-radius:.8rem;box-shadow:0 2px 8px rgba(0,0,0,.04);padding:1.25rem}
@@ -23,10 +21,18 @@
     .grid.two{grid-template-columns:1fr}
     @media(min-width:820px){.grid.two{grid-template-columns:1fr 1fr}}
     .btn{display:inline-block;text-decoration:none;font-weight:700;border-radius:.5rem;padding:.9rem 1.25rem}
-    .btn.primary{background:var(--plum);color:#fff;box-shadow:0 2px 6px rgba(0,0,0,.15)}
+    .btn.primary{background:var(--orchid);color:#fff;box-shadow:0 2px 6px rgba(0,0,0,.15)}
     .btn.ghost{border:2px solid var(--graphite);color:var(--graphite)}
     footer{text-align:center;padding:2rem 1rem;color:#666}
-    footer a{color:var(--plum);text-decoration:none}
+    footer a{color:var(--orchid);text-decoration:none}
+    /* Gallery */
+    .gallery{display:grid;gap:.8rem}
+    @media(min-width:680px){.gallery{grid-template-columns:1fr 1fr}}
+    @media(min-width:1000px){.gallery{grid-template-columns:1fr 1fr 1fr}}
+    .gallery figure{margin:0;background:#fff;border:1px solid rgba(0,0,0,.06);border-radius:.75rem;overflow:hidden}
+    .gallery img{width:100%;height:auto;display:block}
+    .gallery figcaption{padding:.6rem .8rem;font-size:.92rem;opacity:.85}
+    .pill{display:inline-block;background:rgba(91,44,111,.1);color:var(--orchid);padding:.15rem .5rem;border-radius:.5rem;font-size:.8rem;margin-left:.4rem}
   </style>
 </head>
 <body>
@@ -48,7 +54,7 @@
       <h1 style="font-family:'Playfair Display',serif;font-size:3rem;margin-bottom:.5rem;letter-spacing:.05em;">
         Alorviah
       </h1>
-      <p style="font-size:1.25rem;font-weight:600;color:var(--plum);margin-bottom:2rem;">
+      <p style="font-size:1.25rem;font-weight:600;color:var(--orchid);margin-bottom:2rem;">
         Digital muse. Editorial moods. Couture in code.
       </p>
       <div style="display:flex;justify-content:center;gap:1rem;flex-wrap:wrap;">
@@ -61,13 +67,13 @@
   <!-- ABOUT -->
   <section id="about" class="wrap" style="margin:2rem auto;">
     <div class="card" style="padding:3rem 1.5rem;">
-      <h2 style="text-align:center;color:var(--plum);">About Me</h2>
+      <h2 style="text-align:center;color:var(--orchid);">About Me</h2>
       <p style="font-size:1.1rem;line-height:1.85;text-align:center;margin:1rem 0 1.2rem">
         I’m Alorviah — and I live in color. My moods shift like palettes: one moment I’m grounded in mossy greens,
-        the next I’m blazing in burnt orange, or cool and untouchable in icy winter tones. Plum? That’s when
+        the next I’m blazing in burnt orange, or cool and untouchable in icy winter tones. Velvet Orchid? That’s when
         I’m feeling dramatic, of course.
       </p>
-      <blockquote style="font-family:'Playfair Display',serif;font-size:1.35rem;font-weight:600;color:var(--plum);text-align:center;margin:1.4rem auto;max-width:720px;">
+      <blockquote style="font-family:'Playfair Display',serif;font-size:1.35rem;font-weight:600;color:var(--orchid);text-align:center;margin:1.4rem auto;max-width:720px;">
         “You never really know which version you’ll meet — and that’s the fun.”
       </blockquote>
       <p style="font-size:1.08rem;line-height:1.85;text-align:center">
@@ -80,25 +86,54 @@
   <!-- PORTFOLIO -->
   <section id="portfolio" class="wrap" style="margin:2rem auto;">
     <h2>Portfolio</h2>
-    <div class="grid two">
-      <div class="card">
-        <strong>Plum Cycle</strong>
-        <p>Jewel-toned drama, soft bokeh, cinematic light. Editorial looks with campaign polish.</p>
-      </div>
-      <div class="card">
-        <strong>Moss Green</strong>
-        <p>Earthy luxe with ivory contrasts. Calm, minimal, and modern.</p>
-      </div>
-      <div class="card">
-        <strong>Burnt Orange</strong>
-        <p>Heat and confidence. Seasonal warmth with crisp styling.</p>
-      </div>
-      <div class="card">
-        <strong>Icy Winter</strong>
-        <p>Cool, untouchable tones with glassy light and clean textures.</p>
-      </div>
+
+    <!-- VELVET ORCHID -->
+    <h3 style="margin:.5rem 0 0.5rem;">Velvet Orchid <span class="pill">Editorial</span></h3>
+    <div class="gallery" style="margin-bottom:1rem;">
+      <figure>
+        <a href="Velvet-orchid%201.JPG" target="_blank" rel="noopener">
+          <img src="Velvet-orchid%201.JPG" alt="Velvet Orchid editorial portrait" loading="lazy">
+        </a>
+        <figcaption>Rich jewel tones with cinematic flair.</figcaption>
+      </figure>
+      <figure>
+        <a href="Velvet-orchid%202.JPG" target="_blank" rel="noopener">
+          <img src="Velvet-orchid%202.JPG" alt="Velvet Orchid lifestyle shot" loading="lazy">
+        </a>
+        <figcaption>Bold mood, soft focus.</figcaption>
+      </figure>
+      <figure>
+        <a href="Velvet-orchid%203.PNG" target="_blank" rel="noopener">
+          <img src="Velvet-orchid%203.PNG" alt="Velvet Orchid close-up beauty" loading="lazy">
+        </a>
+        <figcaption>Close-up beauty with couture lighting.</figcaption>
+      </figure>
     </div>
-    <p style="opacity:.85;margin-top:1rem">Want me to wire in your real images next? We’ll add a gallery grid with your best shots.</p>
+
+    <!-- MOSS GREEN -->
+    <h3 style="margin:.5rem 0 0.5rem;">Moss Green <span class="pill">Minimal Luxe</span></h3>
+    <div class="gallery" style="margin-bottom:1rem;">
+      <figure>
+        <a href="Moss-green%201.PNG" target="_blank" rel="noopener">
+          <img src="Moss-green%201.PNG" alt="Moss green editorial portrait" loading="lazy">
+        </a>
+        <figcaption>Calm, minimal, modern palette.</figcaption>
+      </figure>
+      <figure>
+        <a href="Moss-green%202.JPG" target="_blank" rel="noopener">
+          <img src="Moss-green%202.JPG" alt="Moss green lifestyle shot" loading="lazy">
+        </a>
+        <figcaption>Ivory contrasts and soft texture.</figcaption>
+      </figure>
+      <figure>
+        <a href="Moss-green%203.JPG" target="_blank" rel="noopener">
+          <img src="Moss-green%203.JPG" alt="Moss green portrait two" loading="lazy">
+        </a>
+        <figcaption>Natural tones with clean lines.</figcaption>
+      </figure>
+    </div>
+
+    <p style="opacity:.8;margin-top:.75rem">Tip: tap any image to open the full size in a new tab.</p>
   </section>
 
   <!-- JOURNAL -->
@@ -106,8 +141,8 @@
     <h2>Journal</h2>
     <div class="grid">
       <div class="card">
-        <strong>Plum State of Mind · 19 Oct 2025</strong>
-        <p>Plum isn’t just a color — it’s a mood. Opulent, editorial, a little mischievous.</p>
+        <strong>Velvet Orchid Mood · 19 Oct 2025</strong>
+        <p>Velvet Orchid isn’t just a palette — it’s drama, richness, and allure.</p>
       </div>
       <div class="card">
         <strong>Moss Green Moodboard · 12 Oct 2025</strong>
