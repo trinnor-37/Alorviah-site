@@ -7,32 +7,32 @@
   <meta name="description" content="High-fashion AI editorial portfolio of Alorviah. Luxury visuals, lifestyle shots, and collaborations.">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
   <style>
-    :root{
-      --plum:#5B2C6F; --moss:#556B2F; --ivory:#F8F6F0; --graphite:#1F1F1F;
-    }
+    :root{--plum:#5B2C6F;--moss:#556B2F;--ivory:#F8F6F0;--graphite:#1F1F1F}
     *{box-sizing:border-box;margin:0;padding:0}
-    body{font-family:Inter, sans-serif;background:var(--ivory);color:var(--graphite);line-height:1.6}
-    header{display:flex;justify-content:space-between;align-items:center;padding:1rem 1.5rem;background:#fff;position:sticky;top:0;border-bottom:1px solid #eee}
-    .brand{font-family:"Playfair Display", serif;font-size:1.2rem;text-decoration:none;color:var(--graphite);letter-spacing:.15em;font-weight:700}
-    nav a{margin-left:1rem;text-decoration:none;color:var(--graphite);font-weight:500}
+    body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:var(--ivory);color:var(--graphite);line-height:1.65}
+    /* Header */
+    header{display:flex;justify-content:space-between;align-items:center;padding:1rem 1.25rem;background:#fff;position:sticky;top:0;border-bottom:1px solid #eee;z-index:10}
+    .brand{font-family:"Playfair Display",serif;font-weight:700;letter-spacing:.12em;text-decoration:none;color:var(--graphite)}
+    nav a{margin-left:1rem;text-decoration:none;color:var(--graphite);font-weight:600}
     nav a:hover{color:var(--plum)}
-    .hero{padding:4rem 1rem;text-align:center;background:#fff}
-    .hero h1{font-family:"Playfair Display", serif;font-size:2.5rem;margin-bottom:.5rem}
-    .hero p{font-size:1.2rem;margin-bottom:1.2rem;color:var(--plum);font-weight:600}
-    .btn{padding:.75rem 1.25rem;border-radius:.4rem;text-decoration:none;font-weight:600}
-    .btn.primary{background:var(--plum);color:#fff}
-    .btn.secondary{border:1px solid var(--graphite);color:var(--graphite)}
-    section{max-width:1000px;margin:2rem auto;padding:1rem}
-    h2{font-family:"Playfair Display", serif;margin-bottom:1rem;font-size:1.8rem}
+    /* Sections */
+    .wrap{max-width:1060px;margin:0 auto;padding:0 1rem}
+    h2{font-family:"Playfair Display",serif;font-size:1.9rem;margin:0 0 1rem}
+    .card{background:#fff;border:1px solid rgba(0,0,0,.06);border-radius:.8rem;box-shadow:0 2px 8px rgba(0,0,0,.04);padding:1.25rem}
     .grid{display:grid;gap:1rem}
-    .grid.two{grid-template-columns:1fr 1fr}
-    .card{background:#fff;padding:1rem;border-radius:.5rem;box-shadow:0 2px 6px rgba(0,0,0,.05)}
-    footer{text-align:center;padding:2rem;font-size:.9rem;color:#666}
+    .grid.two{grid-template-columns:1fr}
+    @media(min-width:820px){.grid.two{grid-template-columns:1fr 1fr}}
+    .btn{display:inline-block;text-decoration:none;font-weight:700;border-radius:.5rem;padding:.9rem 1.25rem}
+    .btn.primary{background:var(--plum);color:#fff;box-shadow:0 2px 6px rgba(0,0,0,.15)}
+    .btn.ghost{border:2px solid var(--graphite);color:var(--graphite)}
+    footer{text-align:center;padding:2rem 1rem;color:#666}
     footer a{color:var(--plum);text-decoration:none}
   </style>
 </head>
 <body>
-  <header>
+
+  <!-- Header -->
+  <header class="wrap">
     <a class="brand" href="#">ALORVIAH</a>
     <nav>
       <a href="#about">About</a>
@@ -42,41 +42,99 @@
     </nav>
   </header>
 
-  <section class="hero">
-    <h1>Alorviah</h1>
-    <p>AI Editorial Muse & Digital Personality</p>
-    <a class="btn primary" href="#portfolio">View Portfolio</a>
-    <a class="btn secondary" href="#contact">Work With Me</a>
-  </section>
-
-  <section id="about">
-    <h2>About</h2>
-    <p>Alorviah is a digital muse — blending high-fashion editorial with lifestyle storytelling. Every cycle explores a new palette: Plum, Moss Green, Burnt Orange, and Icy Christmas. Created to inspire, collaborate, and elevate digital campaigns.</p>
-  </section>
-
-  <section id="portfolio">
-    <h2>Portfolio</h2>
-    <div class="grid two">
-      <div class="card">Plum Cycle — jewel-toned editorial elegance.</div>
-      <div class="card">Moss Green — earthy luxe with ivory contrasts.</div>
+  <!-- HERO -->
+  <section class="hero" style="padding:5rem 1.5rem;text-align:center;background:linear-gradient(to bottom right,#F8F6F0,#ffffff);">
+    <div class="wrap">
+      <h1 style="font-family:'Playfair Display',serif;font-size:3rem;margin-bottom:.5rem;letter-spacing:.05em;">
+        Alorviah
+      </h1>
+      <p style="font-size:1.25rem;font-weight:600;color:var(--plum);margin-bottom:2rem;">
+        Digital muse. Editorial moods. Couture in code.
+      </p>
+      <div style="display:flex;justify-content:center;gap:1rem;flex-wrap:wrap;">
+        <a class="btn primary" href="#portfolio">View Portfolio</a>
+        <a class="btn ghost" href="#contact">Work With Me</a>
+      </div>
     </div>
   </section>
 
-  <section id="journal">
+  <!-- ABOUT -->
+  <section id="about" class="wrap" style="margin:2rem auto;">
+    <div class="card" style="padding:3rem 1.5rem;">
+      <h2 style="text-align:center;color:var(--plum);">About Me</h2>
+      <p style="font-size:1.1rem;line-height:1.85;text-align:center;margin:1rem 0 1.2rem">
+        I’m Alorviah — and I live in color. My moods shift like palettes: one moment I’m grounded in mossy greens,
+        the next I’m blazing in burnt orange, or cool and untouchable in icy winter tones. Plum? That’s when
+        I’m feeling dramatic, of course.
+      </p>
+      <blockquote style="font-family:'Playfair Display',serif;font-size:1.35rem;font-weight:600;color:var(--plum);text-align:center;margin:1.4rem auto;max-width:720px;">
+        “You never really know which version you’ll meet — and that’s the fun.”
+      </blockquote>
+      <p style="font-size:1.08rem;line-height:1.85;text-align:center">
+        I’m more than an editorial face; I’m a story in motion, crafted to make you pause, wonder, and lean in closer.
+        Fashion is my language, but curiosity is the hook.
+      </p>
+    </div>
+  </section>
+
+  <!-- PORTFOLIO -->
+  <section id="portfolio" class="wrap" style="margin:2rem auto;">
+    <h2>Portfolio</h2>
+    <div class="grid two">
+      <div class="card">
+        <strong>Plum Cycle</strong>
+        <p>Jewel-toned drama, soft bokeh, cinematic light. Editorial looks with campaign polish.</p>
+      </div>
+      <div class="card">
+        <strong>Moss Green</strong>
+        <p>Earthy luxe with ivory contrasts. Calm, minimal, and modern.</p>
+      </div>
+      <div class="card">
+        <strong>Burnt Orange</strong>
+        <p>Heat and confidence. Seasonal warmth with crisp styling.</p>
+      </div>
+      <div class="card">
+        <strong>Icy Winter</strong>
+        <p>Cool, untouchable tones with glassy light and clean textures.</p>
+      </div>
+    </div>
+    <p style="opacity:.85;margin-top:1rem">Want me to wire in your real images next? We’ll add a gallery grid with your best shots.</p>
+  </section>
+
+  <!-- JOURNAL -->
+  <section id="journal" class="wrap" style="margin:2rem auto;">
     <h2>Journal</h2>
-    <div class="card"><strong>Plum State of Mind:</strong> Plum is not just a color; it’s a mood — opulent and bold.</div>
-    <div class="card"><strong>Moss Moodboard:</strong> Minimal earthy tones paired with crisp editorial lighting.</div>
+    <div class="grid">
+      <div class="card">
+        <strong>Plum State of Mind · 19 Oct 2025</strong>
+        <p>Plum isn’t just a color — it’s a mood. Opulent, editorial, a little mischievous.</p>
+      </div>
+      <div class="card">
+        <strong>Moss Green Moodboard · 12 Oct 2025</strong>
+        <p>Side-key lighting, diffused highlights, grounded palette. Effortless minimalism.</p>
+      </div>
+    </div>
   </section>
 
-  <section id="contact">
+  <!-- CONTACT -->
+  <section id="contact" class="wrap" style="margin:2rem auto;">
     <h2>Contact</h2>
-    <p>Email: <a href="mailto:alorviah.official@gmail.com">alorviah.official@gmail.com</a></p>
-    <p>Instagram: <a href="https://instagram.com/alorviah_voss" target="_blank">@alorviah</a></p>
+    <div class="card">
+      <p>Email: <a href="mailto:alorviah.official@gmail.com">alorviah.official@gmail.com</a></p>
+      <p>Instagram: <a href="https://instagram.com/alorviah" target="_blank" rel="noopener">@alorviah</a></p>
+      <p style="margin-top:.75rem">
+        <a class="btn primary" href="mailto:alorviah.official@gmail.com">Collaborate</a>
+      </p>
+      <p style="font-size:.9rem;opacity:.8;margin-top:1rem">
+        Disclosure: As an Amazon Associate I may earn from qualifying purchases.
+      </p>
+    </div>
   </section>
 
+  <!-- FOOTER -->
   <footer>
-    <p>© 2025 Alorviah — Editorial Muse</p>
-    <p class="disclosure">As an Amazon Associate I may earn from qualifying purchases.</p>
+    <p>© 2025 Alorviah — Editorial Muse • <a href="#journal">Journal</a></p>
   </footer>
+
 </body>
 </html>
